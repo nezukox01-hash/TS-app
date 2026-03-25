@@ -1,18 +1,26 @@
 import 'package:flutter/material.dart';
 
 ThemeData buildAppTheme() {
-  const seed = Color(0xFF00BFA5);
-
   return ThemeData(
-    colorScheme: ColorScheme.fromSeed(
-      seedColor: seed,
-      brightness: Brightness.dark,
+    brightness: Brightness.dark,
+    scaffoldBackgroundColor: const Color(0xFF0B1E3A),
+
+    primaryColor: Colors.blue,
+
+    textTheme: const TextTheme(
+      bodyMedium: TextStyle(color: Colors.white),
+      bodyLarge: TextStyle(color: Colors.white),
     ),
-    scaffoldBackgroundColor: const Color(0xFF111315),
-    useMaterial3: true,
-    cardTheme: const CardThemeData(
-      color: Color(0xFF1B1E21),
-      margin: EdgeInsets.zero,
+
+    appBarTheme: const AppBarTheme(
+      backgroundColor: Color(0xFF0B1E3A),
+      elevation: 0,
+      titleTextStyle: TextStyle(
+        fontSize: 26,
+        fontWeight: FontWeight.bold,
+        color: Colors.white,
+      ),
+      iconTheme: IconThemeData(color: Colors.white),
     ),
   );
 }
